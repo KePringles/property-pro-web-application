@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary meta tags -->
+  <title>Property Pro - Your Ideal Property Awaits!</title>
+  <meta name="title" content="Property Pro">
+  <meta name="description" content="Find your ideal property with AI-powered recommendations based on your preferences.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./images/logo.png" type="image/png">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google icon link -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+  
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6803531d6c258e190b7fd93f/1ip6fpbg6';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <!-- CSS link -->
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div id="root">
+    <!-- HEADER -->
+    <header class="header" data-header>
+      <div class="container">
+        <div class="logo-container">
+          <img src="./images/logo.png" width="80" height="80" alt="Property Pro Logo">
+          <div>
+            <div class="logo-text">Property Pro</div>
+            <div class="logo-tagline">Your Ideal Property Awaits!</div>
+          </div>
+        </div>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link label-medium active">Home</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-link label-medium">Buy</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-link label-medium">Sell</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-link label-medium">Rent</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-link label-medium">About</a>
+            </li>
+          </ul>
+
+          <div class="navbar-wrapper">
+            <a href="#" class="btn-link label-medium">Login</a>
+            <a href="#" class="btn btn-fill label-medium">Get Started</a>
+          </div>
+        </nav>
+
+        <button class="nav-toggle-btn icon-btn" aria-label="toggle navbar" data-nav-toggler>
+          <span class="material-symbols-rounded open" aria-hidden="true">menu</span>
+          <span class="material-symbols-rounded close" aria-hidden="true">close</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- HERO SECTION -->
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="headline-large hero-title">Find your perfect property.</h1>
+              <p class="body-large hero-text">
+                Discover your ideal property with AI-powered recommendations tailored to your budget, location preferences, and desired amenities.
+              </p>
+
+              <form action="./" method="get" class="search-bar">
+                <div class="search-container">
+                  <label class="search-item">
+                    <span class="label-medium label">I want to</span>
+                    <select name="want-to" class="search-item-field body-medium">
+                      <option value="buy" selected>Buy</option>
+                      <option value="sell">Sell</option>
+                      <option value="rent">Rent</option>
+                    </select>
+                    <span class="material-symbols-rounded" aria-hidden="true">real_estate_agent</span>
+                  </label>
+
+                  <label class="search-item">
+                    <span class="label-medium label">Property type</span>
+                    <select name="property-type" class="search-item-field body-medium">
+                      <option value="any" selected>Any</option>
+                      <option value="houses">Houses</option>
+                      <option value="apartments">Apartments</option>
+                      <option value="villa">Villa</option>
+                      <option value="townhome">Townhome</option>
+                      <option value="commercial">Commercial</option>
+                    </select>
+                    <span class="material-symbols-rounded" aria-hidden="true">gite</span>
+                  </label>
+
+                  <label class="search-item">
+                    <span class="label-medium label">Location</span>
+                    <input type="text" name="location" placeholder="City, Neighborhood..." class="search-item-field body-medium">
+                    <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                  </label>
+
+                  <label class="search-item">
+                    <span class="label-medium label">Budget</span>
+                    <div class="budget-range">
+                      <input type="number" name="min-budget" placeholder="Min $" class="search-item-field budget-field body-medium">
+                      <span class="budget-separator">-</span>
+                      <input type="number" name="max-budget" placeholder="Max $" class="search-item-field budget-field body-medium">
+                    </div>
+                    <span class="material-symbols-rounded" aria-hidden="true">payments</span>
+                  </label>
+                </div>
+
+                <div class="search-actions">
+                  <button type="submit" class="search-btn">
+                    <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                    <span class="label-medium">Search</span>
+                  </button>
+                  
+                  <button type="button" class="advanced-search-toggle btn-text" id="advanced-search-toggle">
+                    <span class="material-symbols-rounded" aria-hidden="true">tune</span>
+                    <span class="label-medium">Advanced Search</span>
+                  </button>
+                </div>
+                
+                <div class="advanced-search-panel" id="advanced-search-panel">
+                  <div class="advanced-search-grid">
+                    <label class="search-item">
+                      <span class="label-medium label">Bedrooms</span>
+                      <select name="bedrooms" class="search-item-field body-medium">
+                        <option value="any" selected>Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                      </select>
+                      <span class="material-symbols-rounded" aria-hidden="true">bed</span>
+                    </label>
+                    
+                    <label class="search-item">
+                      <span class="label-medium label">Bathrooms</span>
+                      <select name="bathrooms" class="search-item-field body-medium">
+                        <option value="any" selected>Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                      </select>
+                      <span class="material-symbols-rounded" aria-hidden="true">bathtub</span>
+                    </label>
+                    
+                    <label class="search-item">
+                      <span class="label-medium label">Square Feet</span>
+                      <div class="budget-range">
+                        <input type="number" name="min-sqft" placeholder="Min" class="search-item-field budget-field body-medium">
+                        <span class="budget-separator">-</span>
+                        <input type="number" name="max-sqft" placeholder="Max" class="search-item-field budget-field body-medium">
+                      </div>
+                      <span class="material-symbols-rounded" aria-hidden="true">straighten</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <img src="./images/hero-banner.jpg" width="816" height="659" alt="Beautiful house" class="hero-banner">
+          </div>
+        </section>
+
+        <!-- PROPERTY SECTION -->
+        <section class="section property" aria-labelledby="property-label">
+          <div class="container">
+            <div class="title-wrapper">
+              <div>
+                <h2 class="section-title headline-small" id="property-label">Featured Properties</h2>
+                <p class="section-text body-large">
+                  Browse our selection of the finest properties, tailored to meet your specific needs and preferences.
+                </p>
+              </div>
+
+              <a href="#" class="btn btn-outline">
+                <span class="label-medium">View All</span>
+                <span class="material-symbols-rounded" aria-hidden="true">arrow_outward</span>
+              </a>
+            </div>
+
+            <div class="property-list">
+              <!-- Property Card 1 -->
+              <div class="card">
+                <div class="card-banner">
+                  <figure class="img-holder" style="--width: 585; --height: 390;">
+                    <img src="./images/property-1.jpg" width="585" height="390" alt="Luxury Villa" class="img-cover">
+                  </figure>
+                  <span class="badge label-medium">New</span>
+                  <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
+                    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+
+                <div class="card-content">
+                  <span class="title-large">$450,000</span>
+                  <h3>
+                    <a href="#" class="title-small card-title">Luxury Villa</a>
+                  </h3>
+                  <address class="body-medium card-text">
+                    Beverly Hills
+                  </address>
+
+                  <div class="card-meta-list">
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">bed</span>
+                      <span class="meta-text label-medium">4 Bed</span>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">bathtub</span>
+                      <span class="meta-text label-medium">3 Bath</span>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
+                      <span class="meta-text label-medium">2800 sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Property Card 2 -->
+              <div class="card">
+                <div class="card-banner">
+                  <figure class="img-holder" style="--width: 585; --height: 390;">
+                    <img src="./images/property-2.jpg" width="585" height="390" alt="Beachfront Condo" class="img-cover">
+                  </figure>
+                  <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
+                    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+
+                <div class="card-content">
+                  <span class="title-large">$320,000</span>
+                  <h3>
+                    <a href="#" class="title-small card-title">Beachfront Condo</a>
+                  </h3>
+                  <address class="body-medium card-text">
+                    Oceanview Drive
+                  </address>
+
+                  <div class="card-meta-list">
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">bed</span>
+                      <span class="meta-text label-medium">2 Bed</span>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">bathtub</span>
+                      <span class="meta-text label-medium">2 Bath</span>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
+                      <span class="meta-text label-medium">1250 sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Property Card 3 -->
+              <div class="card">
+                <div class="card-banner">
+                  <figure class="img-holder" style="--width: 585; --height: 390;">
+                    <img src="./images/property-3.jpg" width="585" height="390" alt="Modern Apartment" class="img-cover">
+                  </figure>
+                  <button class="icon-btn fav-btn" aria-label="add to favorite" data-toggle-btn>
+                    <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+                  </button>
+                </div>
+
+                <div class="card-content">
+                  <span class="title-large">$185,000</span>
+                  <h3>
+                    <a href="#" class="title-small card-title">Modern Apartment</a>
+                  </h3>
+                  <address class="body-medium card-text">
+                    Downtown
+                  </address>
+
+                  <div class="card-meta-list">
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">bed</span>
+                      <span class="meta-text label-medium">2 Bed</span>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">bathtub</span>
+                      <span class="meta-text label-medium">1 Bath</span>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
+                      <span class="meta-text label-medium">950 sqft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURE SECTION -->
+        <section class="section feature" aria-labelledby="feature-label">
+          <div class="container">
+            <figure class="feature-banner">
+              <img src="./images/feature-banner-1.jpg" width="1020" height="690" loading="lazy" alt="AI-powered property search" class="img-cover">
+            </figure>
+
+            <div class="feature-content">
+              <h2 class="headline-medium" id="feature-label">
+                AI-Powered Property Recommendations
+              </h2>
+
+              <p class="body-large feature-text">
+                Our advanced AI and machine learning algorithms analyze your preferences to deliver personalized property recommendations that match your exact needs, saving you time and effort in your property search.
+              </p>
+
+              <ul class="feature-list">
+                <li class="feature-item">
+                  <span class="material-symbols-rounded feature-icon" aria-hidden="true">check_circle</span>
+                  <span class="body-medium">Tailored property suggestions</span>
+                </li>
+
+                <li class="feature-item">
+                  <span class="material-symbols-rounded feature-icon" aria-hidden="true">check_circle</span>
+                  <span class="body-medium">Budget-friendly options</span>
+                </li>
+
+                <li class="feature-item">
+                  <span class="material-symbols-rounded feature-icon" aria-hidden="true">check_circle</span>
+                  <span class="body-medium">Location preference analysis</span>
+                </li>
+
+                <li class="feature-item">
+                  <span class="material-symbols-rounded feature-icon" aria-hidden="true">check_circle</span>
+                  <span class="body-medium">Amenity matching</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="container">
+              <div class="footer-brand">
+                <div class="logo-container">
+                  <img src="./images/logo.png" width="50" height="50" alt="Property Pro Logo">
+                  <div class="logo-text" style="color: var(--white);">Property Pro</div>
+                </div>
+
+                <p class="body-medium footer-text">
+                  Property Pro simplifies your property search with AI-powered recommendations based on your budget, location preferences, and desired amenities.
+                </p>
+              </div>
+
+              <nav class="footer-nav" aria-labelledby="nav-label-1">
+                <p class="title-small footer-list-title" id="nav-label-1">Quick Links</p>
+
+                <ul class="footer-list">
+                  <li>
+                    <a href="#" class="body-medium footer-link">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="body-medium footer-link">Buy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="body-medium footer-link">Sell</a>
+                  </li>
+                  <li>
+                    <a href="#" class="body-medium footer-link">Rent</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <nav class="footer-nav" aria-labelledby="nav-label-2">
+                <p class="title-small footer-list-title" id="nav-label-2">Support</p>
+
+                <ul class="footer-list">
+                  <li>
+                    <a href="#" class="body-medium footer-link">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#" class="body-medium footer-link">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#" class="body-medium footer-link">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="body-medium footer-link">Terms & Conditions</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <nav class="footer-nav" aria-labelledby="nav-label-3">
+                <p class="title-small footer-list-title" id="nav-label-3">Get in Touch</p>
+
+                <ul class="footer-list">
+                  <li>
+                    <a href="mailto:info@propertypro.com" class="body-medium footer-link">info@propertypro.com</a>
+                  </li>
+                  <li>
+                    <address class="address body-medium">
+                      123 Main Street
+                    </address>
+                  </li>
+                  <li>
+                    <ul class="social-list">
+                      <li>
+                        <a href="#" class="social-link">
+                          <span class="material-symbols-rounded">facebook</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="social-link">
+                          <span class="material-symbols-rounded">twitter</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="social-link">
+                          <span class="material-symbols-rounded">instagram</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="container">
+              <p class="copyright body-medium">
+                &copy; 2025 Property Pro - All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="./js/script.js"></script>
+</body>
+</html>
